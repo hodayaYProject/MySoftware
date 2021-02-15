@@ -4,9 +4,9 @@ pipeline {
         stage('checkout') {
             steps {
                 script {
-                    properties([pipelineTriggers([pollSCM('* * * * *')])])
+                    properties([pipelineTriggers([pollSCM('30 * * * *')])])
                 }
-                git 'https://github.com/Dgotlieb/JenkinsTest.git'
+                git 'https://github.com/hodayaYProject/MySoftware.git'
             }
         }
         stage('run python') {
