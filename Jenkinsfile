@@ -13,9 +13,9 @@ pipeline {
             steps {
                 script {
                     if (Boolean.valueOf(env.UNIX)) {
-                        sh 'actoin.py'
+                        sh 'python actoin.py'
                     } else {
-                        bat 'action.py'
+                        bat 'python action.py'
                     }
                 }
             }
