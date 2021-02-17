@@ -14,8 +14,10 @@ pipeline {
                 script {
                     if (Boolean.valueOf(env.UNIX)) {
                         sh 'python action.py'
+                        sh 'python action-screen.py'
                     } else {
                         bat 'python action.py'
+                        bat 'python action-screen.py'
                     }
                 }
             }
