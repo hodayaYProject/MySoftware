@@ -4,7 +4,7 @@ pipeline {
         stage('checkout') {
             steps {
                 script {
-                    properties([pipelineTriggers([pollSCM('30 * * * *')])])
+                    properties([pipelineTriggers([pollSCM('* * * * *')])])
                 }
                 git 'https://github.com/hodayaYProject/MySoftware.git'
             }
