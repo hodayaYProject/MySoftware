@@ -6,7 +6,7 @@ pipeline {
                 script {
                     properties([pipelineTriggers([pollSCM('* * * * *')])])
                 }
-                git 'https://github.com/hodayaYProject/MySoftware.git'
+                git branch: 'main', 'https://github.com/hodayaYProject/MySoftware.git'
             }
         }
         stage('run python') {
